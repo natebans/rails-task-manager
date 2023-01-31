@@ -1,0 +1,13 @@
+<div class='py-3 px-2'>
+  <h1 class='mb-3'><%= @task.title %></h1>
+
+  <h4>
+    <%= @task.details %>
+  </h4>
+
+  <p>
+    Is this task completed? <%= @task.completed %>
+  </p>
+
+  <%= link_to '👈 Back to Task List', tasks_path %>
+</div>
