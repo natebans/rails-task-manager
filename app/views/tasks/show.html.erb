@@ -9,5 +9,14 @@
     Is this task completed? <%= @task.completed %>
   </p>
 
-  <%= link_to '👈 Back to Task List', tasks_path %>
+  <p><%= link_to '✏️ Edit this task', edit_task_path %></p>
+
+  <p>
+    <%= link_to '❌ Delete',
+      task_path(@task),
+      data: {turbo_method: :delete, turbo_confirm: 'Are you sure?'}
+    %>
+  </p>
+
+  <p><%= link_to '👈 Back to Task List', tasks_path %></p>
 </div>
